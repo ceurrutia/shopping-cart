@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gata Blanca Cup Store</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-light bg-light mb-4">
+        <h1 class="text-center my-4">The White Cat Store</h1>
+        <div class="cart-icon">
+          <a href="#cart" class="btn btn-outline-primary">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count" class="badge badge-primary">0</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="row products mb-4">
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="sale-icon"><i class="fas fa-tag"></i></div>
+            <img
+              src="img/taza-gata-blanca.png"
+              class="card-img-top product-image"
+              alt="Taza Gata blanca"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Taza Gata Blanca Atún</h3>
+              <p class="card-text">Precio: U$D 17</p>
+              <button
+                class="btn btn-primary"
+                onclick="addToCart('Taza Gata blanca', 17, 'img/taza-gata-blanca.png')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <img
+              src="img/gato-negro.jpg"
+              class="card-img-top product-image"
+              alt="Taza Gata negra"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Taza Gata Negra Ojos de Gato</h3>
+              <p class="card-text">Precio: U$D 14</p>
+              <button
+                class="btn btn-primary"
+                onclick="addToCart('Taza Gata negra', 14, 'img/gato-negro.jpg')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="sale-icon"><i class="fas fa-tag"></i></div>
+            <img
+              src="img/gato-gris.webp"
+              class="card-img-top product-image"
+              alt="Taza Gata gris"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Taza Gata Gris Sonrisa</h3>
+              <p class="card-text">Precio: U$D 18</p>
+              <button
+                class="btn btn-primary"
+                onclick="addToCart('Taza Gata gris', 18, 'img/gato-gris.webp')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Agrega más productos aquí -->
+      </div>
+
+      <div class="cart mb-4" id="cart">
+        <h2>Cart</h2>
+        <ul id="cart-item" class="list-group mb-2"></ul>
+
+        <p>Total articles: <span id="item-count">0</span></p>
+        <p>Total Price: <span id="total-price">$0.00</span></p>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
